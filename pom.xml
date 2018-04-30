@@ -8,6 +8,11 @@
     <artifactId>common-util</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <java.encoding>UTF-8</java.encoding>
+        <java.version>1.8</java.version>
+    </properties>
+
 
     <dependencies>
 
@@ -93,9 +98,6 @@
             <version>4.3.7.RELEASE</version>
         </dependency>
 
-
-
-
         <dependency>
             <groupId>com.aliyun.openservices</groupId>
             <artifactId>aliyun-log</artifactId>
@@ -103,4 +105,20 @@
         </dependency>
 
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${java.encoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
