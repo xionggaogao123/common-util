@@ -9,7 +9,7 @@ public class JsonResult {
 
     private Object result;
     private String message;
-    private Integer code = 0;
+    private Integer code = 200;
 
     public JsonResult() {
     }
